@@ -1,0 +1,76 @@
+.weui-tab__panel {
+    position: relative;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    &.HousesList,&.introduction,&.user-center{
+        border-bottom: 50px solid transparent;
+        padding-bottom: 0;
+    }
+}
+
+.weui-tabbar__item {
+    display: inline-block;
+    padding: 3px 0 2px;
+    background-color: #fff;
+}
+
+//底部
+.weui-tab {
+    .weui-tabbar p:first-child {
+        font-size: 0;
+    }
+    .weui-tabbar p {
+        //line-height: 50px;
+        font-size: 12px;
+        line-height: 1.6;
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+    }
+    .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+        color: #fb7c1f;
+    }
+}
+
+@media screen and (max-width: 360px) and (min-width: 341px) {
+    .weui-tab {
+        .weui-tabbar p {
+            img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .weui-tab__panel {
+        &.HousesList,&.introduction,&.user-center{
+            border-bottom: 43px solid transparent;
+            padding-bottom: 0;
+        }
+        //padding-bottom: 43px;
+    }
+    .weui-tab {
+        .weui-tabbar {
+            .weui-tabbar__item {
+                padding: 3px 0 2px;
+            }
+            p {
+                line-height: 1.2;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}

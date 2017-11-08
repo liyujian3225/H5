@@ -1,0 +1,207 @@
+.umall {
+    &.weui-tab__panel {
+        border-bottom: 50px solid #ffffff;
+        padding-bottom: 0;
+    }
+    &.tatal_tabbar {
+        font-size: 16px;
+    }
+    .head {
+        line-height: 24px;
+        padding: 0 20px;
+        border-bottom: 12px solid #f8f9fa;
+        > div {
+            .ic-balance, .ic-ymoner, .ic-balance + span, .ic-ymoner + span {
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+            }
+            .ic-balance + span>span, .ic-ymoner + span>span{
+                font-size:12px;
+                color: #9ba0a5;
+            }
+            &:first-child {
+                font-size: 12px;
+                height: 70px;
+                border-bottom: 1px solid #d8d8d8;
+
+                > div:first-child {
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                    flex: 1;
+                    line-height: 1.2;
+                }
+                > div:last-child {
+                    .cell_ft {
+                        width: 24px;
+                        height: 24px;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                }
+                .um {
+                    margin-top: 5px;
+                    font-size: 18px;
+                    color: #fb7c1f;
+                }
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+            }
+            &:not(:first-child) {
+                height: 56px;
+                margin: 0 4px;
+                > div {
+                    &:first-child {
+                        -webkit-box-flex: 1;
+                        -webkit-flex: 1;
+                        flex: 1;
+                        font-size: 14px;
+                        color: #575757;
+                        i {
+                            margin-right: 8px;
+                        }
+                    }
+                    &:last-child {
+                        > span {
+                            &:first-child {
+                                vertical-align: middle;
+                                line-height: 20px;
+                                display: inline-block;
+                                font-size: 13px;
+                                color: #9ba0a5;
+                            }
+                            &:last-child {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .checkI {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .ic-choice-2 {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .content {
+        .list {
+            padding: 24px 25px;
+            .mallLogo {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .money {
+                    position: absolute;
+                    right: 0.5%;
+                    bottom: 7%;
+                    color: #fff;
+                    font-size: 20px;
+                    width: 64px;
+                    padding-left: 4px;
+                    //background-color: #43227B;
+                }
+            }
+            .checkbox {
+                margin-top: 24px;
+                > div {
+                    &:not(:last-child) {
+                        margin-bottom: 8px;
+                    }
+                    div {
+                        font-size: 14px;
+                        color: #575757;
+                        height: 44px;
+                        line-height: 44px;
+                        text-align: center;
+                        border: 1px solid #9ba0a5;
+                        border-radius: 2px;
+                        -webkit-box-flex: 1;
+                        -webkit-flex: 1;
+                        flex: 1;
+                        &:not(:last-child) {
+                            margin-right: 9px;
+                        }
+                        &.active {
+                            border-color: #fb7c1f;
+                            color: #fb7c1f;
+                        }
+                    }
+                }
+            }
+            .foot {
+                margin-top: 24px;
+                font-size: 16px;
+                font-weight: 500;
+                > span:first-child {
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                    flex: 1;
+                    display: block;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.umall.tatal_tabbar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    color: #484848;
+
+    > div:first-child {
+        width:56px;
+        height:32px;
+        line-height:normal;
+        text-align: center;
+        border-right:1px solid rgba(0,0,0,0.16);
+        i{
+            margin-top: 4px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    > div:nth-child(2) {
+        position: relative;
+        display: block;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        text-align: right;
+        padding-right: 18px;
+        span {
+            font-weight: 500;
+            color: #fb7c1f;
+        }
+    }
+    .btn {
+        width: 120px;
+        background-color: #fb7c1f;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 340px) {
+    .umall.tatal_tabbar {
+        >div:first-child{
+            width:40px;
+        }
+    }
+}

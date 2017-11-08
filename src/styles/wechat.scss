@@ -1,0 +1,28 @@
+.wechat-code,
+.wechat-login {
+    .code-layer,
+    .login-layer {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        background: white;
+
+        .wechat-info {
+            height: 100%;
+            .wechat-group {
+                text-align: center;
+                .wechat-code {
+                    max-width: 80%;
+                    max-height: 80%;
+                }
+                .wechat-notice {
+                    padding: 10px 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

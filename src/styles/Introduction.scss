@@ -1,0 +1,132 @@
+@import './common';
+.introduction {
+    &.weui-tab__panel{
+        border-bottom: 50px solid #f6f7f8;
+        padding-bottom: 0;
+    }
+    background-color: #f6f7f8;
+    .diagram {
+        background-color: #fff;
+        padding-bottom: 32px;
+        .img {
+            img {
+                width: 100%;
+                max-height: 206px;
+            }
+        }
+        .premisesName {
+            padding: 16px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+        }
+        .description {
+            padding: 0 16px;
+            //@include font-omitted(2);
+        }
+    }
+    .list {
+
+        //margin-bottom: 20px;
+        //padding-bottom: 30px;
+        .title {
+            font-size: 16px;
+            padding: 16px 0 16px 13px;
+            color: #484848;
+        }
+        .items {
+            padding: 0 16px;
+            a {
+                color: inherit;
+            }
+            >div {
+                background-color: #ffffff;
+                padding-bottom: 16px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 5px 0 rgba(32, 44, 58, 0.1);
+            }
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+            .product {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: flex;
+                overflow: hidden;
+                margin-left: 16px;
+                a {
+                    position: relative;
+                    display: block;
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                    flex: 1;
+                    overflow: hidden;
+                    padding: 10px 0 10px 0px;
+                    max-width: 25%;
+                    box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    /* Firefox */
+                    -webkit-box-sizing: border-box;
+                    /* Safari */
+                }
+                a:last-child {
+                    padding: 0px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .interiorName {
+                font-size: 16px;
+                color: #484848;
+                line-height: 20px;
+                margin-bottom: 8px;
+                margin-left: 16px;
+            }
+            .aipPrice {
+                color: #fb7c1f;
+                font-size: 18px;
+                line-height: 1.2;
+                margin-bottom: 8px;
+                margin-left: 16px;
+            }
+            .uxuanPrice {
+                color: #9ba0a5;
+                font-size: 12px;
+                line-height: 16px;
+                margin-bottom: 20px;
+                margin-left: 16px;
+            }
+            .commodityDetail {
+                a {
+                    display: block;
+                    margin: 0 16px;
+                    background-color: #fb7c1f;
+                    border-radius:2px;
+                    color: #fff;
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 12px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .introduction {
+        &.weui-tab__panel {
+            border-bottom: 43px solid #f6f7f8;
+        }
+        .list {
+            >div {
+                .flex {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

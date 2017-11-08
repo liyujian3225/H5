@@ -1,0 +1,927 @@
+@import 'common.scss';
+
+.user-center {
+    >div{
+        border-bottom: 60px solid #f6f7f8;
+    }
+    .weui-cell:before{
+        right:15px;
+    }
+    .user-info {
+        height: 183px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #0E0E0E;
+        background-image: url(../images/img-in-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 0px 0px;
+        .img {
+            padding-top: 48px;
+            padding-bottom: 10px;
+            display: block;
+            .header {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
+        .userName {
+            position: relative;
+            &.proxy:after {
+                content: "代理人";
+                width: 43px;
+                padding: 2px;
+                height: 20px;
+                font-size: 10px;
+                line-height: 20px;
+                border-radius: 16px;
+                background-color: #353433;
+                position: absolute;
+                margin-left: 10px;
+            }
+        }
+        .logout {
+            .logout-btn {
+                padding: 3px 11px;
+                border-radius: 4px;
+                font-size: 13px;
+                margin: 2px 0;
+                background-color: #fb7c1f;
+                color: #fff;
+            }
+        }
+    }
+    .weui-panel {
+        margin-top: 0;
+        &:after, .weui-cells:before, .weui-cells:after {
+            border: 0;
+        }
+        .weui-cell{
+            padding:16px 20px;
+            font-size: 15px;
+            &:not(.ub_list){
+                .weui-cell__bd,.weui-cell__ft{
+                    line-height:28px;
+                    height:28px;
+                }
+            }
+
+        }
+        .weui-cell__ft {
+            img {
+                width: 28px;
+                height: 28px;
+                vertical-align: middle;
+                margin-left: 8px;
+            }
+        }
+        .ub_list {
+            border-bottom: 16px solid #f8f9fa;;
+            padding: 16px 20px;
+            .weui-cell__bd {
+                font-size: 12px;
+                color: #9ba0a5;
+                line-height: 1.4;
+                p:first-child {
+                    font-size: 15px;
+                    color: #484848;
+                    line-height: 20px;
+                    margin-bottom: 4px;
+                }
+                p:last-child {
+                    margin-top: 4px;
+                    color: #fb7c1f;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .weui-cell__ft {
+                img {
+                    width: 28px;
+                    height: 28px;
+                }
+                > div {
+                    width: 70px;
+                    height: 42px;
+                    border-radius: 2px;
+                    padding-left: 4px;
+                    background-color: #f7f7f5;
+                    border: solid 1px #d1c7c0;
+                    font-size: 12px;
+                    color: #cfc8c0;
+                    text-align: left;
+                    line-height: 16px;
+                    p:first-child {
+                        padding-top: 6px;
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*我的余额*/
+.balance {
+    &.weui-tab__panel {
+        padding-bottom: 0;
+        border-bottom: 50px solid transparent;
+    }
+    .head {
+        height: 111px;
+        background: url(../images/img-bg-2.png) 0 0 no-repeat;
+        background-size: 100%;
+        padding: 21px 24px 0;
+        color: #ffffff;
+        > div:first-child {
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            > p:last-child {
+                font-size: 40px;
+                font-weight: 500;
+            }
+        }
+        a {
+            color: #ffffff;
+        }
+    }
+    >div>div.content {
+        margin-top: -4px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        .title {
+            line-height: 48px;
+            padding-left: 20px;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+            span {
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+            }
+            .ic-add {
+                width: 24px;
+                height: 24px;
+                margin-right: 20px;
+            }
+        }
+        .bankCard {
+            line-height: 72px;
+            text-align: center;
+            border-bottom: 12px solid #f8f9fa;
+            .add {
+                color: #fb7c1f;
+                font-size: 14px;
+                span {
+                    margin-left: 8px;
+                    vertical-align: middle;
+                }
+                .ic-add {
+                    width: 24px;
+                    height: 24px;
+                    vertical-align: middle;
+                }
+            }
+            .item {
+                .img {
+                    width: 36px;
+                    height: 36px;
+                    padding-left: 20px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        vertical-align: top;
+                    }
+                }
+                .cardInfo {
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                    flex: 1;
+                    margin-left: 10px;
+                    line-height: 20px;
+                    color: #9ba0a5;
+                    text-align: left;
+                    font-size: 14px;
+                    p:first-child {
+                        font-size: 16px;
+                        color: #484848;
+                    }
+                }
+                .check {
+                    padding-right: 20px;
+                    i {
+                        width: 24px;
+                        height: 24px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .withdraw {
+            padding: 20px;
+            .title {
+                font-size: 14px;
+                line-height: 20px;
+                padding: 0;
+                border: 0;
+            }
+            .money {
+                line-height: 50px;
+                font-size: 40px;
+                font-weight: normal;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+                &:before {
+                    content: "￥";
+                    vertical-align: middle;
+                    display: inline-block;
+                    float: left;
+                }
+                div {
+                    overflow: hidden;
+                }
+                input {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+            .doc {
+                margin-top: 8px;
+                margin-bottom: 32px;
+                font-size: 12px;
+                color: #9ba0a5;
+                span {
+                    //margin-left: 6px;
+                    color: #484848;
+                }
+                .ic-i{
+                    width: 22px;
+                    height: 22px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .btn {
+            //border-radius: 2px;
+            //margin: 0 20px 20px;
+            //height: 50px;
+            //line-height: 50px;
+            //text-align: center;
+            //background-color: #fb7c1f;
+            //font-size: 14px;
+            //font-weight: 500;
+            //color: #ffffff;
+        }
+
+        .backList {
+            .weui-dialog__hd {
+                text-align: center;
+                padding: 14px 0;
+                font-size: 14px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+            }
+            .weui-dialog__bd {
+                text-align: left;
+                padding: 0 14px;
+            }
+            .list {
+                font-size: 14px;
+                color: #212121;
+                > div {
+                    height: 48px;
+                    &.DialogShowHide {
+                        position: absolute;
+                        top: 0px;
+                        right: 18px;
+                        border-bottom: 0 !important;
+                        height: 50px;
+                        line-height: 48px;
+                        font-size: 20px;
+                        color: #b0b1b1;
+                    }
+                    &:nth-child(3), &:nth-child(4) {
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+                    }
+                    &.bind {
+                        height: 44px;
+                        color: #9ba0a5;
+                        font-size: 12px;
+                    }
+                    input {
+                        width: 100%;
+                        font-size:16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*我的余额详情*/
+.balanceDetail {
+    &.weui-tab__panel {
+        padding-bottom: 0;
+    }
+    .list {
+        .item {
+            padding: 16px 0;
+            margin: 0 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.16);;
+            > div {
+                font-size: 14px;
+                line-height: 1.43em;
+                &:last-child {
+                    margin-top: 4px;
+                    font-size: 12px;
+                    color: #9ba0a5;
+                }
+                > span:first-child {
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                    flex: 1;
+                    > i {
+                        font-size: 10px;
+                        margin-left: 8px;
+                    }
+                }
+                .fMoney {
+                    color: #ff4141;
+                }
+                .AMoney {
+                    color: #00a699;
+                }
+            }
+        }
+    }
+}
+
+/*我的优币*/
+.myU {
+    &.weui-tab__panel {
+        padding-bottom: 0px;
+    }
+    .head {
+        height: 153px;
+        background: url(../images/img-bg-2.png) 0 0 no-repeat;
+        background-color: #EB823B;
+        background-size: 100%;
+        padding: 21px 24px 0;
+        color: #ffffff;
+
+        > div.totalCoin {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ffffff;
+            > div:first-child {
+                font-size: 15px;
+                display: block;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+                color: rgba(255, 255, 255, 0.8);
+                > p:last-child {
+                    color: #fff;
+                    font-size: 40px;
+                    line-height: 55px;
+                    margin-top: 5px;
+                    font-weight: 500;
+                }
+            }
+            a {
+                color: rgba(255, 255, 255, 1);
+                font-size: 14px;
+            }
+        }
+        > div.notCoin {
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+
+            > div {
+                font-size: 12px;
+                display: block;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+                line-height: 1.2;
+                &.line {
+                    width: 1px;
+                    height: 32px;
+                    background-color: #ffffff;
+                    margin: 0 20px;
+                    font-size: 0;
+                    -webkit-box-flex: initial;
+                    -webkit-flex: initial;
+                    flex: initial;
+
+                }
+                > p:last-child {
+                    margin-top: 6px;
+                    font-size: 18px;
+                    color: rgba(255, 255, 255, 0.9);
+                }
+                &:first-child {
+
+                    >p:first-child{
+                        span{
+                            line-height: 24px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                &:last-child {
+                    > div {
+                        line-height:24px;
+                        span:first-child {
+                            -webkit-box-flex: 1;
+                            -webkit-flex: 1;
+                            flex: 1;
+                            white-space: nowrap;
+                        }
+                        span:last-child {
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            .ic-i2 {
+                width: 18px;
+                height: 18px;
+                vertical-align: middle;
+            }
+        }
+    }
+    .content {
+        .title {
+            background-color: #f8f9fa;
+            color: #484848;
+            line-height: 41px;
+            padding-left: 24px;
+            font-size: 14px;
+        }
+    }
+}
+
+/*我的优币详情*/
+.UserMyUDetail {
+    background-color: #f8f9fa;
+    padding-bottom: 0 !important;
+    .list {
+        .item {
+            background-color: #fff;
+            margin: 0 12px 16px;
+            padding: 0 12px;
+            &:first-child {
+                margin-top: 12px;
+            }
+            > div:not(:first-child) {
+                border-top: 1px solid rgba(0, 0, 0, 0.16);
+            }
+            .hd {
+                padding: 20px 0;
+                font-size: 12px;
+                line-height: 16px;
+                color: #484848;
+                > div:first-child {
+                    position: relative;
+                    display: block;
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                    flex: 1;
+                }
+            }
+            .bd {
+                padding: 16px 0;
+                .img {
+                    margin-right: 8px;
+                    position: relative;
+                    display: block;
+                    img {
+                        width: 72px;
+                        height: 72px;
+                    }
+                }
+                .name {
+
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                    flex: 1;
+                    color: #484848;
+                    font-size: 14px;
+                    > p:first-child {
+                        height: 40px;
+                        line-height: 20px;
+                        @include font-omitted(2);
+                    }
+                    > p:last-child {
+                        margin-top: 10px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/*提现额度*/
+.UserMyUWithdraw {
+    background-color: #f8f9fa;
+    &.weui-tab__panel {
+        padding-bottom: 0px;
+    }
+    .list {
+        .react-weui-infiniteloader__content {
+            padding: 0px 12px;
+        }
+        .no-proxy {
+            margin-top:12px;
+            background: url(../images/img-bg-2.png) 0 30% no-repeat;
+            background-color: #eb823b;
+            background-size: 100%;
+            height: 82px;
+            color: #fff;
+            > div:first-child {
+                text-align: center;
+                padding-left: 15%;
+                font-size: 16px;
+                > p:last-child {
+                    margin-top: 9px;
+                    font-size: 12px;
+                }
+            }
+            > div:last-child {
+                width: 15%;
+                text-align: right;
+            }
+            .ic-authentication {
+                width: 28px;
+                height: 28px;
+                vertical-align: middle;
+                margin-right: 4px;
+                & + span {
+                    vertical-align: middle;
+                }
+            }
+            .cell_ft {
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                display: inline-block;
+                margin-right: 16px;
+                &:after {
+                    border-color: #ffffff;
+                    height: 10px;
+                    width: 10px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .item {
+            margin-top: 12px;
+            background-color: #ffffff;
+            padding: 0 20px;
+            .orderNum {
+                line-height: 56px;
+                font-size: 12px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+            }
+            .moneyTotal {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+                height: 85px;
+                overflow: hidden;
+                > p:first-child {
+                    margin-top: 18px;
+                    line-height: 18px;
+                    font-size: 12px;
+                }
+                > p:last-child {
+                    margin-top: 8px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    color: #484848;
+                }
+            }
+            .s-invitation {
+                height: 88px;
+                > div {
+                    text-align: center;
+                    &:nth-child(1){
+                        padding:0 12px;
+                    }
+                    &:nth-child(2) ,&:nth-child(4) {
+                        width: 1px;
+                        height: 24px;
+                        background-color: rgba(0, 0, 0, 0.16);
+                    }
+                    > p:first-child {
+                        //margin-top: 18px;
+                        line-height: 16px;
+                        font-size: 12px;
+                    }
+                    > p:last-child {
+                        margin-top: 4px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 1.2;
+                        color: #484848;
+                        span {
+                            font-size: 12px;
+                            color: #9ba0a5;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+            .slider {
+                height: 58px;
+                padding-top: 4px;
+
+                .slider-line {
+                    background-color: rgba(0, 0, 0, 0.1);
+                    border-radius: 26px;
+                    overflow: hidden;
+                    .slider-inner {
+                        height: 8px;
+                        border-radius: 26px;
+                        background-image: linear-gradient(to left, #f65816, #f67c16);
+                    }
+                }
+                .slider-box {
+                    margin-top: 11px;
+                    font-size: 12px;
+                    color: #9ba0a5;
+                    line-height: 1.58;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+/*代理人信息*/
+.proxy_info {
+    &.weui-tab__panel {
+        padding: 0;
+    }
+    .head {
+        height: 112px;
+        background: url(../images/img-bg-2.png) 0 0 no-repeat;
+        background-color: #EB823B;
+        background-size: 100%;
+        padding: 20px 24px 0;
+        color: #ffffff;
+        line-height: 1.2;
+        text-align: center;
+        > p {
+            font-size: 14px;
+            margin-bottom: 30px;
+            &:first-child {
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+                font-size: 44px;
+                margin-bottom: 0;
+                line-height: 1.27;
+            }
+        }
+    }
+    .content {
+        margin-top: -4px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        .nav {
+            line-height: 48px;
+            font-size: 14px;
+            padding: 0 24px;
+            span {
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                flex: 1;
+                text-align: center;
+                color: #484848;
+                border-bottom: 2px solid #f5f5f9;
+                &.active {
+                    border-bottom-color: #fb7c1f;
+                    color: #fb7c1f;
+                }
+            }
+        }
+        .rewardList {
+            padding: 0 24px;
+            .item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+                span {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                > div {
+                    height: 72px;
+                }
+                font-size: 14px;
+                .name {
+                    > p:first-child {
+                        font-size: 16px;
+                    }
+                    > p:last-child {
+                        font-size: 12px;
+                        color: #9ba0a5;
+                        margin-top: 4px;
+                    }
+
+                }
+                .fMoney {
+                    text-align: right;
+                    > p:first-child {
+                        font-size: 16px;
+                        color: #00a699;
+                    }
+                    > p:last-child {
+                        font-size: 12px;
+                        color: #9ba0a5;
+                        margin-top: 4px;
+                    }
+
+                }
+            }
+        }
+        .recommend {
+            padding: 0 24px;
+            .item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+                font-size: 14px;
+                > div {
+                    height: 72px;
+                    > div {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+                div.date {
+                    color: #9ba0a5;
+                }
+                img.head {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    padding: 0;
+                    font-size: 0;
+                    vertical-align: middle;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
+
+/*更换手机号码*/
+.user-phone {
+    padding: 0 20px;
+    font-size: 14px;
+    .phone-container {
+        width: 100%;
+    }
+    //.phone-title {
+    //    //margin-top: 40px;
+    //    margin-right:10px;
+    //    color: #212121;
+    //    line-height:52px;
+    //    height:52px;
+    //    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    //
+    //    &.not-bind {
+    //        margin-bottom: 10px;
+    //        font-size: 16px;
+    //    }
+    //}
+    //.phone-tel {
+    //    width: 100%;
+    //    line-height: 52px;
+    //    height: 52px;
+    //    color: #212121;
+    //    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    //    //margin-bottom: 37px;
+    //}
+    .phone-wrap{
+        text-align: center;
+        font-size:16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        margin-bottom: 40px;
+        margin-top: 30px;
+        >div{
+            display: inline-block;
+            line-height:52px;
+        }
+
+    }
+    .phone-group {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 2px;
+        background-color: #fb7c1f;
+        font-size:16px;
+        button {
+            color: #ffffff;
+        }
+    }
+
+    .backList {
+        .weui-dialog__hd {
+            text-align: center;
+            padding: 22px 0;
+            font-size: 14px;
+            border-bottom: 0;
+        }
+        .weui-dialog__bd {
+            text-align: left;
+            padding: 0 14px;
+        }
+        .list {
+            font-size: 14px;
+            color: #212121;
+            > div {
+                margin-bottom: 15px;
+                &.DialogShowHide {
+                    position: absolute;
+                    top: 0px;
+                    right: 18px;
+                    border-bottom: 0 !important;
+                    height: 50px;
+                    line-height: 48px;
+                    font-size: 20px;
+                    color: #b0b1b1;
+                }
+                input {
+                    width: 100%;
+                    height: 36px;
+                    border: 1px solid rgba(0, 0, 0, 0.16);
+                    text-indent: 1em;
+                    font-size: 18px;
+                }
+                .btn {
+                    margin-left: 8px;
+                    width: 85px;
+                    height: 32px;
+                    line-height: 32px;
+                    border-radius: 2px;
+                    color: #fff;
+                    background-color: #fb7c1f;
+                    border: none;
+                    //border: 1px solid #fb7c1f;
+                    font-size: 13px;
+                    &:disabled {
+                        cursor: not-allowed;
+                        background-color: rgba(0, 0, 0, .16);
+                        //border-color: gray;
+                        color: gray;
+                    }
+                    &:active {
+                        background-color: #F16911;
+                        color: #fff;
+                        //border: #F16911;
+                        //color: #F16911;
+                        //background-color: rgba(255, 255, 255, 0.6);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sPurchase {
+    //padding: 0 4px;
+    width: 100%;
+    background-color: #fa791d;
+    .goBack {
+        width: 60px;
+        height: 38px;
+        border-right: 1px solid #ffffff;
+        text-align: center;
+        > i {
+            display: inline-block;
+            margin-top: 7px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    >div.btn {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        background-color: #ff7a24;
+        .aipPrice {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}

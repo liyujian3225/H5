@@ -1,0 +1,68 @@
+.user-login {
+    .login-container {
+        width: 100%;
+        padding: 10px;
+    }
+    .login-group {
+        margin: 30px 20px 0;
+        &.input-group {
+            div {
+                padding-bottom: 10px;
+            }
+            .login-input {
+                width: 100%;
+                &.code-input {
+                    margin-right: 10px;
+                }
+            }
+            img {
+                display: block;
+                height: 30px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+            &.error {
+                border-bottom: 1px solid #fb7c1f;
+            }
+            .phone-code-btn {
+                width: 85px;
+                min-width: 85px;
+                height: 30px;
+                border-radius: 2px;
+                color: #fff;
+                background-color: #fb7c1f;
+                border: none;
+                //border: 1px solid #fb7c1f;
+                font-size: 13px;
+                &:disabled {
+                    cursor: not-allowed;
+                    background-color: rgba(0,0,0,.16);
+                    //border-color: gray;
+                    color: gray;
+                }
+                &:active {
+                    background-color: #F16911;
+                    color: #fff;
+                    //border: #F16911;
+                    //color: #F16911;
+                    //background-color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+        button {
+            display: block;
+        }
+        .login-btn {
+            width: 100%;
+            height: 50px;
+            background-color: #fb7c1f;
+            color: white;
+
+            &:disabled {
+                background-color: rgba(0,0,0,0.16);
+            }
+        }
+    }
+}

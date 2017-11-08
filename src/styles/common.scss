@@ -1,0 +1,444 @@
+//多行省略
+@mixin font-omitted($row) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+}
+
+
+//金钱
+$money: red;
+
+.pl5 {
+    padding-left: 5px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl25 {
+    padding-left: 25px;
+}
+
+.pl30 {
+    padding-left: 30px;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pr25 {
+    padding-right: 25px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pt25 {
+    padding-top: 25px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pb25 {
+    padding-bottom: 25px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.ml25 {
+    margin-left: 25px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mr25 {
+    margin-right: 25px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt25 {
+    margin-top: 25px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb25 {
+    margin-bottom: 25px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.cell_ft:after {
+    content: " ";
+    /*display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    -webkit-transform: matrix(.71, .71, -.71, .71, 0, 0);
+    transform: matrix(.71, .71, -.71, .71, 0, 0);
+    position: relative;*/
+    background: url(../images/ic-arrow.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+//去掉按钮样式
+.btn-clear {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+.noData {
+    text-align: center;
+    padding-top: 40%;
+    .ic-noorder,.ic-nodata {
+        width: 112px;
+        height: 112px;
+    }
+    p:last-child{
+        padding-top: 10%;
+        font-size: 14px;
+        color: #212121;
+    }
+}
+
+@import "flexbox";
+
+.flex-1 {
+    @include flex(1);
+}
+
+// 方向: 水平;
+.f--h {
+    @include flexbox;
+    @include align-items(stretch);
+}
+
+// 方向： 垂直;
+.f--s {
+    @include flexbox;
+    @include align-items(stretch);
+    @include flex-direction(column);
+}
+
+// 方向: 水平; 对齐: 水平居左, 垂直居中
+.f--hlc {
+    @include flexbox;
+    @include flex-direction(row);
+    @include align-items(center);
+}
+
+// 方向: 水平; 对齐: 水平居左, 垂直居上
+.f--hlt {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(center);
+}
+
+// 方向: 水平; 对齐: 水平居中, 垂直居中
+.f--hcc {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+// 方向：垂直; 对齐：水平居左，垂直居中
+.f--slc {
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+}
+
+.textHover {
+    &:disabled {
+        cursor: not-allowed;
+        border-color: gray;
+        color: gray;
+    }
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.btnHover:active {
+    background-color: #F16911;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ic-aeeow {
+    background: url(../images/ic-aeeow.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.title {
+    font-family: "SimHei" !important;
+}
+
+input {
+    box-sizing: border-box;
+    border: none;
+    -web-kit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
+    text-decoration: none;
+    display: block;
+}
+
+//手机验证码弹出框
+.cellphoneCode {
+    .weui-dialog__bd {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        .tel{
+            font-size:16px;
+            text-align: center;
+            //margin-bottom: 15px;
+            //margin-top: 10px;
+        }
+        > div {
+            text-align: left;
+            >p:not(:first-child){
+                margin-top: 15px;
+            }
+            input {
+                width:100%;
+                height: 32px;
+                border: solid 1px rgba(0, 0, 0, 0.16);
+                font-size:16px;
+
+            }
+            button {
+                margin-left: 8px;
+                width: 85px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 2px;
+                background-color: #fb7c1f;
+                border:0;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+
+                &:disabled {
+                    cursor: not-allowed;
+                    background-color: rgba(0,0,0,.16);
+                    color: gray;
+                }
+                &:active {
+                    background-color: #F16911;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.fb7{
+    color: #fb7c1f;
+}
+.ic-add {
+    background: url(../images/ic-add.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-i2 {
+    background: url(../images/ic-i2.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-i {
+    background: url(../images/ic-i.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-choice-2 {
+    background: url(../images/ic-choice-2.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+.ic-aeeow-32-white {
+    background: url(../images/ic-aeeow-32-white.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-ymoner {
+    background: url(../images/ic-ymoner.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-balance {
+    background: url(../images/ic-balance.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-noorder {
+    background: url(../images/ic-noorder.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-nodata {
+    background: url(../images/ic-nodata.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-authentication {
+    background: url(../images/ic-authentication.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}
+
+.ic-aeeow-24-white {
+    background: url(../images/ic-aeeow-24-white.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+}

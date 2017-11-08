@@ -1,0 +1,53 @@
+.protocol-pop-up {
+    .protocol-body {
+        overflow-y: auto;
+        max-height: 60vh;
+        text-align: left;
+
+        .p-center {
+            text-align: center;
+        }
+
+        .p-bold {
+            font-weight: bold;
+        }
+
+        .p-inline-block {
+            display: inline-block;
+        }
+
+        .p-text-indent {
+            text-indent: 2em;
+        }
+
+        .content {
+            margin-bottom: 5px;
+        }
+
+        .protocol-head {
+            text-align: center;
+            font-size: 16px;
+            color: #484848;
+        }
+
+        .protocol-title {
+            font-size: 15px;
+            color: #484848;
+        }
+
+        .protocol-subTitle {
+            font-size: 14px;
+            color: #484848;
+        }
+
+        .protocol-bold {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .protocol-normal {
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+    }
+}
