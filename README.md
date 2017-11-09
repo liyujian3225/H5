@@ -10,4 +10,4 @@ B. Third-party-module:
 - classnames: 用于样式的class； 
   1 How to use?  $class('xs')等价于 'xs', 可以加入判断，如：$class('xs', {this.state.enable?'enable-class':'disable-class'})
   
-C. 暂不需要引入redux，flux，reflux等相关数据处理模块, 如需要我会引入 －－Brian
+C. 暂不需要引入redux，flux，reflux等相关数据处理模块
